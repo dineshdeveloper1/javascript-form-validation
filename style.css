@@ -218,3 +218,8 @@ section {
     visibility: visible;
     color: hsl(131, 53%, 45%);
 }
+
+.error_message{
+    color: red;
+    font-size: 15px;
+}

@@ -16,36 +16,24 @@
     <section>
         <div class="form_heading">Create your account</div>
 
-        <form name="register" class="form" onsubmit="event.preventDefault(); return validateForm(this)">
+        <form name="register" class="form" onsubmit="event.preventDefault(); return validateForm()">
             <div class="form_control">
                 <input type="text" name="fullname" placeholder="fullname" id="fullname" class="form_input">
                 <label for="fullname" class="form_label">Full name</label>
-                <span class="form_alert"></span>
-                <span class="form_check">
-                    <i class="ion-success ion-md-checkmark-circle"></i>
-                    <i class="ion-invalid ion-md-information-circle"></i>
-                 </span>
+            </div>
+
+            <div class="form_control">
+                <input type="number" name="phone" placeholder="phone" id="phone" class="form_input">
+                <label for="phone" class="form_label">Phone</label>
+            </div>
+
+            <div class="form_control">
+                <input type="text" name="email" placeholder="email" id="email" class="form_input">
+                <label for="email" class="form_label">Email</label>
             </div>
             
-            <!-- <div class="form_control">
-                <input type="email" name="email" placeholder="email" id="email" class="form_input">
-                <label for="email" class="form_label">Email</label>
-                <span class="form_alert">Email is required!</span>
-                <span class="form_check">
-                    <i class="ion-success ion-md-checkmark-circle"></i>
-                    <i class="ion-invalid ion-md-information-circle"></i>
-                 </span>
-            </div> -->
-
-            <!-- <div class="form_control">
-                <input type="password" name="password" placeholder="password" id="password" class="form_input">
-                <label for="password" class="form_label">Password</label>
-                <span class="form_alert">Password is required!</span>
-                <span class="form_check">
-                    <i class="ion-success ion-md-checkmark-circle"></i>
-                    <i class="ion-invalid ion-md-information-circle"></i>
-                 </span>
-            </div> -->
+            <div class="error_message"></div>
+            
             <div class="form_control">
                 <button type="submit" class="btn_submit">Create New Account</button>
             </div>

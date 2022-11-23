@@ -1,30 +1,19 @@
-function validateForm(form){
-    console.log('validate form - function')
+function validateForm(){
 
-    console.log(form.fullname.value.trim().length)
+    let fullName = document.querySelector('#fullname').value
+    let fullNameLength = fullName.length
+    
+    let phoneNumber = document.querySelector('#phone').value
+    let phoneNumberLength = phoneNumber.length
 
-    if(form.fullname.value.trim() === ''){
-        valueChecking(form.fullname, "Name is required!!!")
-    }else if(form.fullname.value.trim().length <= 3){
-        valueChecking(form.fullname, "Name sould be more then 3")
-    }else {
-        valueSuccess(form.fullname)
+    if(fullNameLength <= 3){
+        document.querySelector('.error_message').innerText = 'Name is required with minium 4 characters!!'
+
+    } else if(phoneNumberLength !== 10){
+        document.querySelector('.error_message').innerText = 'Phone number should be 10 digit'
+
+    }else{
+        document.querySelector('.error_message').innerText = ''
     }
+
 }
-
-
-function valueSuccess(input){
-    let formControl = input.parentElement;
-    formControl.className = "form_control success";
-}
-
-function valueChecking(input, message){
-    let formControl = input.parentElement;
-    let formAlert = formControl.querySelector('.form_alert');
-    formControl.className = "form_control invalid";
-    formAlert.innerHTML = message
-}
-
-
-
-
