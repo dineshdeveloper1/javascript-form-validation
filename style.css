@@ -223,3 +223,8 @@ section {
     color: red;
     font-size: 15px;
 }
+
+.success_message{
+    color: green;
+    font-size: 15px;
+}
